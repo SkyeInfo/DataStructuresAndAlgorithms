@@ -28,6 +28,7 @@ function bubbleSort(array $arr){
         }
     }
 
+    
     return $arr;
 }
 $testArr = array(6,4,16,5,9,23,22,65,11);
