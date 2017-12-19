@@ -27,7 +27,6 @@ function bubbleSort(array $arr){
             }
         }
     }
-
     
     return $arr;
 }
