@@ -18,6 +18,5 @@ class BackpackQue{
         if($j > $w[$i]){ //可以拿
             //此时取最大值
         }
-        
     }
 }
