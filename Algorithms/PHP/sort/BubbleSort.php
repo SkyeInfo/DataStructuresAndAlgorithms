@@ -1,6 +1,6 @@
 <?php
 /**
- * 冒泡排序-基于比较-稳定的算法
+ * 冒泡排序-基于比较-稳定
  * 时间复杂度O(n2) 空间复杂度O(1)
  * @author skyeinfo@qq.com
  * @lastModifyTime 2018/11/21
@@ -20,11 +20,12 @@ class BubbleSort
     public function bubbleSortOne(array $sortArr) {
         $startTime = microtime(true);
         $count = count($sortArr);
+        if ($count <= 1) print_r($sortArr);
 
         for ($i = 0; $i < $count; $i++) {
             for ($j = $i + 1; $j < $count; $j++) {
                 if ($sortArr[$i] > $sortArr[$j]) {
-                    $temp = $sortArr[$i];
+                    $temp        = $sortArr[$i];
                     $sortArr[$i] = $sortArr[$j];
                     $sortArr[$j] = $temp;
                 }
@@ -47,6 +48,7 @@ class BubbleSort
     public function bubbleSortTwo(array $sortArr) {
         $startTime = microtime(true);
         $count = count($sortArr);
+        if ($count <= 1) print_r($sortArr);
 
         for ($i = 0; $i < $count; $i++) {
             $flag = false;
