@@ -1,6 +1,7 @@
 <?php
 /**
- * 插入排序-升序
+ * 插入排序-升序-稳定
+ * 时间复杂度-O(n2)，空间复杂度-O(1)
  * @author skyeinfo@qq.com
  * @lastModifyTime 2018/11/21
  * @lastModify skyeinfo@qq.com
