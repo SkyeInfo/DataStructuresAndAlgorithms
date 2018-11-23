@@ -42,6 +42,15 @@ class QuickSort
         }
     }
 
+    /**
+     * 分解的过程可解Top-K问题
+     * @author skyeinfo@qq.com
+     * @lastModifyTime 2018/11/23
+     * @lastModify skyeinfo@qq.com
+     * @param array $sortArr
+     * @param $start
+     * @param $end
+     */
     public function mainTwo(array &$sortArr, $start, $end) {
         if ($start >= $end) return;
 
@@ -68,9 +77,11 @@ class QuickSort
 }
 
 $a = new QuickSort();
+
 $arr = [15,12,4,24,5,21,6,32,56,14,37,23];
+$a->mainOne($arr, 0, count($arr) - 1);
+print_r($arr);
 
-//$a->mainOne($arr, 0, count($arr) - 1);
+$arr = [15,12,4,24,5,21,6,32,56,14,37,23];
 $a->mainTwo($arr, 0, count($arr) - 1);
-
 print_r($arr);
