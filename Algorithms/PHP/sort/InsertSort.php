@@ -10,7 +10,7 @@ namespace Sort;
 
 class InsertSort
 {
-    public function insertSort(array $sortArr) {
+    public function main(array $sortArr) {
         $startTime = microtime(true);
         $count = count($sortArr);
 
@@ -47,4 +47,4 @@ class InsertSort
 //$a = new InsertSort();
 //$arr = [12,4,5,21,6,32,56,14,37,23];
 //
-//$a->insertSort($arr);
+//$a->main($arr);

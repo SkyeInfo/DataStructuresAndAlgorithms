@@ -17,7 +17,7 @@ class BubbleSort
      * @lastModify skyeinfo@qq.com
      * @param array $sortArr
      */
-    public function bubbleSortOne(array $sortArr) {
+    public function mainOne(array $sortArr) {
         $startTime = microtime(true);
         $count = count($sortArr);
         if ($count <= 1) print_r($sortArr);
@@ -45,7 +45,7 @@ class BubbleSort
      * @lastModify skyeinfo@qq.com
      * @param array $sortArr
      */
-    public function bubbleSortTwo(array $sortArr) {
+    public function mainTwo(array $sortArr) {
         $startTime = microtime(true);
         $count = count($sortArr);
         if ($count <= 1) print_r($sortArr);
@@ -80,5 +80,5 @@ for ($i = 0; $i < 1000; $i++) {
 print_r($a);
 
 $bubbleSort = new BubbleSort();
-$bubbleSort->bubbleSortOne($a);
-$bubbleSort->bubbleSortTwo($a);
+$bubbleSort->mainOne($a);
+$bubbleSort->mainTwo($a);

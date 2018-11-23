@@ -1,9 +1,10 @@
 <?php
 /**
- * 选择排序
- * @author yangshengkai@chuchujie.com
+ * 选择排序-升序-不稳定
+ * 时间复杂度-O(n2)，空间复杂度-O(1)
+ * @author skyeinfo@qq.com
  * @lastModifyTime 2018/11/22
- * @lastModify yangshengkai@chuchujie.com
+ * @lastModify skyeinfo@qq.com
  */
 namespace Sort;
 
@@ -11,7 +12,7 @@ require_once '../vendor/autoload.php';
 
 class SelectSort
 {
-    public function selectSort(array $sortArr) {
+    public function main(array $sortArr) {
         $startTime = microtime(true);
         $count = count($sortArr);
 
@@ -54,5 +55,5 @@ $a = new SelectSort();
 $b = new InsertSort();
 $arr = [15,12,4,24,5,21,6,32,56,14,37,23];
 
-$a->selectSort($arr);
-$b->insertSort($arr);
+$a->main($arr);
+$b->main($arr);
