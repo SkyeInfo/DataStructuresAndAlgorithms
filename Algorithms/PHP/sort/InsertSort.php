@@ -14,8 +14,10 @@ class InsertSort
         $startTime = microtime(true);
         $count = count($sortArr);
 
-        if ($count <= 1) print_r($sortArr);
-
+        if ($count <= 1) {
+            print_r($sortArr);
+            return;
+        }
         for ($i = 1; $i < $count; $i++) {
             $value = $sortArr[$i];
 
@@ -42,7 +44,7 @@ class InsertSort
     }
 }
 
-$a = new InsertSort();
-$arr = [12,4,5,21,6,32,56,14,37,23];
-
-$a->insertSort($arr);
+//$a = new InsertSort();
+//$arr = [12,4,5,21,6,32,56,14,37,23];
+//
+//$a->insertSort($arr);
