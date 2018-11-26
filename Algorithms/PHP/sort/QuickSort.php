@@ -2,12 +2,23 @@
 /**
  * 快速排序-不稳定
  * 时间复杂度-O(nlogn)，空间复杂度-O(1)
+ * 快排优化：
+ * 优化点在于分区点的选取，例如：三数取中、随机法等
  * @author skyeinfo@qq.com
  * @lastModifyTime 2018/11/23
  * @lastModify skyeinfo@qq.com
  */
 class QuickSort
 {
+    /**
+     * 分区点在中间
+     * @author yangshengkai@chuchujie.com
+     * @lastModifyTime 2018/11/26
+     * @lastModify yangshengkai@chuchujie.com
+     * @param array $sortArr
+     * @param $left
+     * @param $right
+     */
     public function mainOne(array &$sortArr, $left, $right) {
 
         $i = $left;
@@ -22,7 +33,7 @@ class QuickSort
             while ($sortArr[$j] > $middle && $j > $left) {
                 $j--;
             }
-            //var_dump($i,$j);
+
             if ($i <= $j) {
                 $temp = $sortArr[$i];
                 $sortArr[$i] = $sortArr[$j];
@@ -43,6 +54,7 @@ class QuickSort
     }
 
     /**
+     * 分区点在末尾
      * 分解的过程可解Top-K问题
      * @author skyeinfo@qq.com
      * @lastModifyTime 2018/11/23
