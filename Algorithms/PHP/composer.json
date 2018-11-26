@@ -8,7 +8,8 @@
       "LinkedList\\": "linkedList/",
       "Stack\\": "stack/",
       "Queue\\": "queue/",
-      "Sort\\": "sort/"
+      "Sort\\": "sort/",
+      "Search\\": "search/"
     }
   }
 }

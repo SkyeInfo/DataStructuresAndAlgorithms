@@ -26,6 +26,8 @@ class CountingSort
      * @param array $sortArr
      */
     public function main(array $sortArr) {
+        if (count($sortArr) <= 1) print_r($sortArr);
+
         $maxNum = max($sortArr);
 
         $scoreCount = $score = array();

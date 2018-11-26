@@ -11,6 +11,7 @@ class ComposerStaticInit98abfdc41ca98a67c809b5cdcdae1554
         array (
             'Stack\\' => 6,
             'Sort\\' => 5,
+            'Search\\' => 7,
         ),
         'Q' => 
         array (
@@ -30,6 +31,10 @@ class ComposerStaticInit98abfdc41ca98a67c809b5cdcdae1554
         'Sort\\' => 
         array (
             0 => __DIR__ . '/../..' . '/sort',
+        ),
+        'Search\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/search',
         ),
         'Queue\\' => 
         array (
