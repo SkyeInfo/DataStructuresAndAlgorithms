@@ -11,4 +11,5 @@ return array(
     'Search\\' => array($baseDir . '/search'),
     'Queue\\' => array($baseDir . '/queue'),
     'LinkedList\\' => array($baseDir . '/linkedList'),
+    'HashTable\\' => array($baseDir . '/hash'),
 );

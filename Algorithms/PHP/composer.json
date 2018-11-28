@@ -9,7 +9,8 @@
       "Stack\\": "stack/",
       "Queue\\": "queue/",
       "Sort\\": "sort/",
-      "Search\\": "search/"
+      "Search\\": "search/",
+      "HashTable\\": "hash/"
     }
   }
 }

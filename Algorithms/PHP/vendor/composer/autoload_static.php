@@ -21,6 +21,10 @@ class ComposerStaticInit98abfdc41ca98a67c809b5cdcdae1554
         array (
             'LinkedList\\' => 11,
         ),
+        'H' => 
+        array (
+            'HashTable\\' => 10,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -43,6 +47,10 @@ class ComposerStaticInit98abfdc41ca98a67c809b5cdcdae1554
         'LinkedList\\' => 
         array (
             0 => __DIR__ . '/../..' . '/linkedList',
+        ),
+        'HashTable\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/hash',
         ),
     );
 
