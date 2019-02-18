@@ -60,7 +60,7 @@ class HeapSort
     }
 
     /**
-     * 调整最大堆
+     * 调整堆
      * @author skyeinfo@qq.com
      * @lastModifyTime 2019/2/18
      * @lastModify skyeinfo@qq.com
