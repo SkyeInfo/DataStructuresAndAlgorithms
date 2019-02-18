@@ -1,10 +1,9 @@
 <?php
 /**
  * 堆排序
- *
- * @author yangshengkai@chuchujie.com
+ * @author skyeinfo@qq.com
  * @lastModifyTime 2019/2/18
- * @lastModify yangshengkai@chuchujie.com
+ * @lastModify skyeinfo@qq.com
  */
 class HeapSort
 {
@@ -12,9 +11,9 @@ class HeapSort
      * 排序
      * 从小到大，先构建最大堆，再交换，然后按最大堆调整
      * 从大到小，先构建最小堆，再交换，然后按最小堆调整
-     * @author yangshengkai@chuchujie.com
+     * @author skyeinfo@qq.com
      * @lastModifyTime 2019/2/18
-     * @lastModify yangshengkai@chuchujie.com
+     * @lastModify skyeinfo@qq.com
      * @param array $numbers
      * @return array
      */
@@ -102,7 +101,6 @@ class HeapSort
             $this->adjustHeap($numArr, $heapSize, $limitIndex, $isMinHead);
         }
     }
-
 }
 
 $arr = [12,3,5,24,56,32,14,8,16,18,133];
