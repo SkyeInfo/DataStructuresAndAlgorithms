@@ -77,13 +77,13 @@ class HeapByArray
 
 $arr = [12,3,5,24,56,32,14,8,16,18,133];
 
-$buildHead = new HeapByArray();
+$buildHeap = new HeapByArray();
 
-$buildHead->buildHeap($arr);
+$buildHeap->buildHeap($arr);
 
 var_dump($arr);
 
 $arr[0] = 1000;
-$buildHead->buildHeap($arr);
+$buildHeap->buildHeap($arr);
 
 var_dump($arr);
