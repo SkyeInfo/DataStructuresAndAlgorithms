@@ -214,8 +214,7 @@ class SkipList
         $level = 1;
 
         for ($i = 1; $i < $this->maxLevel; $i++) {
-            $r = rand();
-            if ($r % 2 == 1) {
+            if (mt_rand(0, 1)) {
                 $level++;
             }
         }
