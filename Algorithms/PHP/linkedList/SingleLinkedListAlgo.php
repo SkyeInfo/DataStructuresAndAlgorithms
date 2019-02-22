@@ -9,8 +9,6 @@ namespace LinkedList;
 
 require_once '../vendor/autoload.php';
 
-use LinkedList\SingleLinkedList;
-
 $a = new SingleLinkedListAlgo();
 $a->testAlgo();
 
@@ -34,7 +32,19 @@ class SingleLinkedListAlgo
     }
 
     /**
-     * 反转单链表 无环
+     * 获取头结点
+     * @author skyeinfo@qq.com
+     * @lastModifyTime 2019/2/22
+     * @lastModify skyeinfo@qq.com
+     * @return 头结点（哨兵节点）|null
+     */
+    public function getHead() {
+        return $this->list->head;
+    }
+
+    /**
+     * 反转单链表 无环 非递归方式
+     * 时间复杂度为O(N) 空间复杂度为O(1)
      * @author skyeinfo@qq.com
      * @lastModifyTime 2018/11/6
      * @lastModify skyeinfo@qq.com
@@ -62,6 +72,31 @@ class SingleLinkedListAlgo
         $headNode->next = $preNode;
 
         return true;
+    }
+
+    /**
+     * 反转链表 递归方式 时间复杂度为O(N) 空间复杂度为O(1)
+     * 注意：初始值为第一个节点而非头结点，否则会产生环
+     * @author skyeinfo@qq.com
+     * @lastModifyTime 2019/2/22
+     * @lastModify skyeinfo@qq.com
+     * @param SingleLinkedListNode $current
+     * @return SingleLinkedListNode
+     */
+    public function reverseNode(SingleLinkedListNode $current) {
+        if (null == $current || null == $current->next) {
+            $this->list->head->next = $current;
+            return $current;
+        }
+
+        $curNode = $current->next;
+        $current->next = null;
+
+        $reverseRest = $this->reverseNode($curNode);
+
+        $curNode->next = $current;
+
+        return $reverseRest;
     }
 
     /**
@@ -256,6 +291,9 @@ class SingleLinkedListAlgo
         $listDelete->printList();
         $listAlgo->setList($listDelete);
         $listAlgo->deleteLastKth(6);
+        $listAlgo->list->printListSimple();
+
+        $listAlgo->reverseNode($listAlgo->getHead()->next);
         $listAlgo->list->printListSimple();
 
         // 求链表的中间结点
