@@ -31,9 +31,9 @@ class printBT{
             return;
         }
 
-        $this->prePrint($head->left);
+        $this->midPrint($head->left);
         echo $head->val . " ";
-        $this->prePrint($head->right);
+        $this->midPrint($head->right);
     }
 
     //后序
@@ -43,8 +43,8 @@ class printBT{
             return;
         }
 
-        $this->prePrint($head->left);
-        $this->prePrint($head->right);
+        $this->backPrint($head->left);
+        $this->backPrint($head->right);
         echo $head->val . " ";
     }
 
@@ -59,9 +59,9 @@ class printBT{
         $head->right->right = new Node(7);
 
         $this->prePrint($head);
-        echo "<br>";
+        echo PHP_EOL;
         $this->midPrint($head);
-        echo "<br>";
+        echo PHP_EOL;
         $this->backPrint($head);
     }
 }

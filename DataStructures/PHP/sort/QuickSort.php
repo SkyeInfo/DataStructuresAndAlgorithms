@@ -71,9 +71,11 @@ class QuickSort
 
         for ($j = $start; $j < $end; $j++) {
             if ($sortArr[$j] < $pivot) {
-                $temp = $sortArr[$i];
-                $sortArr[$i] = $sortArr[$j];
-                $sortArr[$j] = $temp;
+                if ($i != $j) {
+                    $temp = $sortArr[$i];
+                    $sortArr[$i] = $sortArr[$j];
+                    $sortArr[$j] = $temp;
+                }
 
                 $i++;
             }
