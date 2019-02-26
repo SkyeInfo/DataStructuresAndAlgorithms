@@ -67,7 +67,7 @@ echo "耗时：" . $time . 's' . PHP_EOL;
 $buildHeap = new HeapByArray();
 
 $buildHeap->buildHeap($number);  //把number构造为最小堆
-for ($i = 10; $i < 1000000; $i++) {
+for ($i = 100; $i < 1000000; $i++) {
     if ($numbers[$i] > $number[0]) {
         $number[0] = $numbers[$i];
 
