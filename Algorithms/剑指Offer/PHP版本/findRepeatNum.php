@@ -36,13 +36,13 @@ function solution3(array $arr) {
     $count = count($arr);
 
     for ($i = 0; $i < $count; $i++) {
-        if ($i == $arr[$i]) continue;
+        while ($i != $arr[$i]) {
+            if ($arr[$i] == $arr[$arr[$i]]) { return $arr[$i]; }
 
-        if ($arr[$i] == $arr[$arr[$i]]) { return $arr[$i]; }
-
-        $temp = $arr[$arr[$i]];
-        $arr[$arr[$i]] = $arr[$i];
-        $arr[$i] = $temp;
+            $temp = $arr[$arr[$i]];
+            $arr[$arr[$i]] = $arr[$i];
+            $arr[$i] = $temp;
+        }
     }
 
     return false;
