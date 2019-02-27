@@ -57,6 +57,10 @@ class printBT{
         $head->left->right  = new Node(5);
         $head->right->left  = new Node(6);
         $head->right->right = new Node(7);
+        $head->left->left->left = new Node(8);
+        $head->left->left->right = new Node(9);
+        $head->right->left->left = new Node(10);
+        $head->right->left->left->left = new Node(11);
 
         $this->prePrint($head);
         echo PHP_EOL;
