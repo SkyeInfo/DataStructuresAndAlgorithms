@@ -37,6 +37,8 @@ function solution3(array $arr) {
 
     for ($i = 0; $i < $count; $i++) {
         while ($i != $arr[$i]) {
+            if ($arr[$i] > ($count - 1) || $arr[$i] < 0) return false;
+
             if ($arr[$i] == $arr[$arr[$i]]) { return $arr[$i]; }
 
             $temp = $arr[$arr[$i]];
