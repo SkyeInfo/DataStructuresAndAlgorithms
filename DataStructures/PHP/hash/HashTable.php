@@ -1,9 +1,9 @@
 <?php
 /**
  * 散列表（哈希表）
- * @author yangshengkai@chuchujie.com
+ * @author skyeinfo@qq.com
  * @lastModifyTime 2018/11/28
- * @lastModify yangshengkai@chuchujie.com
+ * @lastModify skyeinfo@qq.com
  */
 class HashTable
 {

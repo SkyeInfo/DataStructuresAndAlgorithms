@@ -2,9 +2,9 @@
 /**
  * 二叉树 根节点到叶子节点最短路径问题
  * 实际是说：从根节点到最近的叶子节点所经过的节点数
- * @author yangshengkai@chuchujie.com
+ * @author skyeinfo@qq.com
  * @lastModifyTime 2019/2/27
- * @lastModify yangshengkai@chuchujie.com
+ * @lastModify skyeinfo@qq.com
  */
 class Node {
     public $val;
@@ -82,9 +82,9 @@ function minDepth2($node) {
 /**
  * 非递归方式
  * 利用的是广度优先遍历的方式，找到第一个没有左右子树的节点
- * @author yangshengkai@chuchujie.com
+ * @author skyeinfo@qq.com
  * @lastModifyTime 2019/2/27
- * @lastModify yangshengkai@chuchujie.com
+ * @lastModify skyeinfo@qq.com
  * @param Node $root
  * @return int
  */

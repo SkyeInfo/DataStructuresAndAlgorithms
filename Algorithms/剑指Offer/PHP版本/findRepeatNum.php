@@ -5,9 +5,9 @@
  * 但是不知道有几个数字重复，也不知道重复数字重复了几次，
  * 找出数组中第一个重复的数字/数组中任意一个重复的数字
  * 用例：[2,3,1,0,2,5,3]  那么其中重复的数字是2 和 3
- * @author yangshengkai@chuchujie.com
+ * @author skyeinfo@qq.com
  * @lastModifyTime 2019/2/26
- * @lastModify yangshengkai@chuchujie.com
+ * @lastModify skyeinfo@qq.com
  */
 
 /**
@@ -48,4 +48,56 @@ function solution3(array $arr) {
     }
 
     return false;
+}
+
+/**
+ * 第四种方案
+ * 大体上采用二分查找的思想
+ * 题目：一共有n+1个数字，数字范围为1~n，找出一个重复的数字
+ * 时间复杂度O(NlogN)，空间复杂度O(1)
+ */
+$b = [1,2,3,4,5,6,7,8];
+var_dump(solution4($a));
+var_dump(solution4($b));
+function solution4(array $arr){
+    if (empty($arr)) return false;
+
+    $count = count($arr);
+    $start = 1;  //数字最小值
+    $end = $count - 1;   //数字最大值
+
+    while ($end >= $start) {
+        $middle = (($end - $start) >> 1) + $start;
+
+        $numCount = solution4Count($arr, $count, $start, $middle);
+
+        if ($end == $start) {
+            if ($numCount > 1) {
+                return $start;
+            } else {
+                break;
+            }
+        }
+
+        if ($numCount > ($middle - $start + 1)) {  //说明在这个区间内必存在重复数字
+            $end = $middle;
+        } else {
+            $start = $middle + 1;
+        }
+    }
+
+    return false;
+}
+function solution4Count(array $arr, $length, $start, $end) {
+    if (empty($arr)) return 0;
+
+    $numCount = 0;
+
+    for ($i = 0; $i < $length; $i++) {
+        if ($arr[$i] >= $start && $arr[$i] <= $end) {
+            $numCount++;
+        }
+    }
+
+    return $numCount;
 }

@@ -1,9 +1,9 @@
 <?php
 /**
  * 深度优先遍历和广度优先遍历
- * @author yangshengkai@chuchujie.com
+ * @author skyeinfo@qq.com
  * @lastModifyTime 2019/2/27
- * @lastModify yangshengkai@chuchujie.com
+ * @lastModify skyeinfo@qq.com
  */
 class Node {
     public $val;
@@ -37,9 +37,9 @@ function createBT() {
 /**
  * 深度优先 == 前序遍历
  * 只不过这个是非递归版本实现
- * @author yangshengkai@chuchujie.com
+ * @author skyeinfo@qq.com
  * @lastModifyTime 2019/2/27
- * @lastModify yangshengkai@chuchujie.com
+ * @lastModify skyeinfo@qq.com
  * @param $root
  */
 function dfs($root) {
@@ -64,9 +64,9 @@ function dfs($root) {
 
 /**
  * 广度优先
- * @author yangshengkai@chuchujie.com
+ * @author skyeinfo@qq.com
  * @lastModifyTime 2019/2/27
- * @lastModify yangshengkai@chuchujie.com
+ * @lastModify skyeinfo@qq.com
  * @param $root
  */
 function bfs($root) {
