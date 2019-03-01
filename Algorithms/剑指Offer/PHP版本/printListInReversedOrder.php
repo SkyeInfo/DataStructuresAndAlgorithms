@@ -63,7 +63,6 @@ function printListInReversedOrderRecursively(ListNode $node) {
 
         echo $node->val . ' ';
     }
-
 }
 $head = createList();
 printListInReversedOrderWithStack($head);
