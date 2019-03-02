@@ -1,9 +1,9 @@
 <?php
 /**
  * 已知前序和中序重建二叉树
- * @author yangshengkai@chuchujie.com
+ * @author skyeinfo@qq.com
  * @lastModifyTime 2019/3/1
- * @lastModify yangshengkai@chuchujie.com
+ * @lastModify skyeinfo@qq.com
  */
 class TreeNode
 {
