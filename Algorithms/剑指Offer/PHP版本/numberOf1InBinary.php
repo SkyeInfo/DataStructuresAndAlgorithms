@@ -10,7 +10,7 @@
  * 当不断将n右移时容易引起死循环
  * 所以移动标志位
  */
-var_dump(numOf1(0));
+var_dump(numOf1(PHP_INT_MIN));
 var_dump(numberOf1(0x7FFFFFFF));
 var_dump(judge(1024));
 
@@ -46,5 +46,5 @@ function numberOf1($num){
  */
 
 function judge($num) {
-    return ($num == 0) ? false : ($num & ($num - 1) ? false : true);
+    return ($num <= 0) ? false : ($num & ($num - 1) ? false : true);
 }
