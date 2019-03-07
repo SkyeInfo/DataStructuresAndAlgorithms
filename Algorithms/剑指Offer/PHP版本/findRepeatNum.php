@@ -88,6 +88,7 @@ function solution4(array $arr){
 
     return false;
 }
+
 function solution4Count(array $arr, $length, $start, $end) {
     if (empty($arr)) return 0;
 

@@ -1,9 +1,9 @@
 <?php
 /**
  * 已知前序和中序重建二叉树
- * @author yangshengkai@chuchujie.com
+ * @author skyeinfo@qq.com
  * @lastModifyTime 2019/3/1
- * @lastModify yangshengkai@chuchujie.com
+ * @lastModify skyeinfo@qq.com
  */
 class TreeNode
 {
@@ -11,8 +11,7 @@ class TreeNode
     public $left;
     public $right;
 
-    public function __construct($val)
-    {
+    public function __construct($val) {
         if (isset($val)) {
             $this->val = $val;
         }
@@ -27,6 +26,7 @@ function rebuildBinaryTree(array $preOrder, array $inOrder) {
     $preOrderEndIdx = $inOrderEndIdx = $length - 1;
     return constructTree($preOrder, $preOrderStartIdx, $preOrderEndIdx, $inOrder, $inOrderStartIdx, $inOrderEndIdx);
 }
+
 function constructTree($preOrder, $preOrderStartIdx, $preOrderEndIdx, $inOrder, $inOrderStartIdx, $inOrderEndIdx) {
     if ($preOrderStartIdx > $preOrderEndIdx || $inOrderStartIdx > $inOrderEndIdx) { return null; }
 
